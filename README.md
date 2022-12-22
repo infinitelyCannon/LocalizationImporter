@@ -11,7 +11,7 @@ Once all the settings are configured, the tool will run through each command for
 4. All the .po files are imported back in and compiled.
 
 ## Setup
-This tool depends on “Python Scripting Plugin” and “Editor Scripting Utilities” to be enabled. It also assumes that the cultures you want to update were already added as targets, as it won’t add new cultures that were found in the spreadsheet.
+This tool depends on “Python Scripting Plugin” and “Editor Scripting Utilities” to be enabled. It also assumes that the cultures you want to update were already added as targets, as it won’t add new cultures that were found in the spreadsheet. To use the included libraries for reading excel sheets (and to communicate between C++ and Python), there's an "init_unreal.py" file that imports the precompiled libraries and creates a bridge class that's referenced by the native code. This should be detected and ran by Unreal automatically, but if not the file should be added to the list of Startup Scripts in the python settings.
 
 The tool assumes the spreadsheet is formatted a certain way. Where the first column holds the keys for the native culture, the second column holds the values for the native culture, and each column after holds the translated phrase.
 
